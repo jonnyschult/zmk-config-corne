@@ -1,130 +1,50 @@
-/{\ 
- combos {
-        compatible = "zmk,combos";
+#define COMBO_TERM_FAST   18
+#define COMBO_TERM_SLOW   50
+#define COMBO_TERM_SLOWER 100
+#define COMBO_PRIOR_IDLE  150
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp ESCAPE>;
-        };
 
-       combo_a {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp A>;
-        };
+// sourced from urob/zmk-node-free
+// if called with 4 args from zmk_combo, then
+//   5 is combo_6, 6 is combo_5 and FUNC is combo_4
+// if called with 5 args from zmk_combo, then
+//   6 is combo_5, FUNC is combo_5, and combo_4 is in the '...'
+// if called with 6 args from zmk_combo, then
+//   FUNC is combo_6, and combo_4 and combo_5 are in the '...'
+// the macro is replaced with FUNC
+#define MACRO_CHOOSER5(_1, _2, _3, _4, _5, _6, FUNC, ...) FUNC
 
-        combo_b {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <TK1 TK2>;
-            timeout-ms = <50>;
-        };
+#define ZMK_COMBO_6_ARGS(name, combo_bindings, keypos, combo_layers, combo_timeout, prior_idle) \
+  / { \
+    combos { \
+      compatible = "zmk,combos"; \
+      combo_ ## name { \
+        bindings = <combo_bindings>; \
+        key-positions = <keypos>; \
+        layers = <combo_layers>; \
+        timeout-ms = <combo_timeout>; \
+        require-prior-idle-ms = <prior_idle>; \
+      }; \
+    }; \
+  };
 
-        combo_c {
-            timeout-ms = <200>;
-            key-positions = <9 10>;
-            bindings = <&kp C>;
-        };
-        
-        combo_d {
-            timeout-ms = <200>;
-            key-positions = <18 19>;
-            bindings = <&kp D>;
-        };
+#define ZMK_COMBO_4_ARGS(name, combo_bindings, keypos, combo_layers) \
+    ZMK_COMBO_6_ARGS(name, combo_bindings, keypos, combo_layers, COMBO_TERM_SLOW, COMBO_PRIOR_IDLE)
 
-        combo_e {
-            timeout-ms = <200>;
-            key-positions = <27 28>;
-            bindings = <&kp E>;
-        };
-        combo_tab {
-            bindings = <&kp TAB>;
-            key-positions = <13 14>;
-        };
+#define ZMK_COMBO_5_ARGS(name, combo_bindings, keypos, combo_layers, combo_timeout) \
+    ZMK_COMBO_6_ARGS(name, combo_bindings, keypos, combo_layers, combo_timeout, COMBO_PRIOR_IDLE)
 
-        combo_shift {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <25 26>;
-        };
+// var args gets spread here so the macro will be called with
+// 4, 5 or 6 args plus the funcs, so 5 6 or 7 args total
+#define ZMK_COMBO(...) MACRO_CHOOSER5(__VA_ARGS__, ZMK_COMBO_6_ARGS, ZMK_COMBO_5_ARGS, ZMK_COMBO_4_ARGS)(__VA_ARGS__)
 
-        combo_delete {
-            bindings = <&kp DELETE>;
-            key-positions = <21 22>;
-        };
-
-        combo_rshift {
-            bindings = <&kp RIGHT_SHIFT>;
-            key-positions = <33 34>;
-        };
-
-        exclm {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <1 13>;
-        };
-
-        at {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <2 14>;
-        };
-
-        hash {
-            bindings = <&kp HASH>;
-            key-positions = <3 15>;
-        };
-
-        dllr {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-        };
-
-        percnt {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-        };
-
-        caret {
-            bindings = <&kp CARET>;
-            key-positions = <6 18>;
-        };
-
-        and {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <7 19>;
-        };
-
-        str {
-            bindings = <&kp ASTERISK>;
-            key-positions = <8 20>;
-        };
-
-        leftparen {
-            bindings = <&kp LPAR>;
-            key-positions = <9 21>;
-        };
-
-        rparen {
-            bindings = <&kp RPAR>;
-            key-positions = <10 22>;
-        };
-
-        layout_switch {
-            bindings = <&tog 4>;
-            key-positions = <36 37 40 41>;
-        };
-
-        system_reset {
-            bindings = <&sys_reset>;
-            key-positions = <3 4 5>;
-        };
-
-        bootloader {
-            bindings = <&bootloader>;
-            key-positions = <15 16 17>;
-        };
-
-        system_layer_combo {
-            bindings = <&mo 3>;
-            key-positions = <36 37>;
-        };
-    };
-};
+/*
+  ╭─────────────────────────┬─────────────────────────╮
+  │ LT4 LT3 LT2 LT1  <----<ing>---->  RT1 RT2 RT3 RT4 │
+  │ LM4 LM3 LM2 LM1  <----<the>---->  RM1 RM2 RM3 RM4 │
+  │ LB4 LB3 LB2 LB1 LB0     │     RB0 RB1 RB2 RB3 RB4 │
+  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
+              ╰─────────────┴─────────────╯
+*/
+ZMK_COMBO(combo_backspace, &kp BACKSPACE, TK1 TK2, 0)
+// ZMK_COMBO(thread_arrow, &thread_arrow, RT1 RT2 RT3, DEF)
