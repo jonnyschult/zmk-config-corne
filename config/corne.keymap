@@ -30,7 +30,7 @@
 	        key-positions = <17 18 19>;
             bindings = <&kp B>;
         };
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";
