@@ -46,5 +46,5 @@
   ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
               ╰─────────────┴─────────────╯
 */
-ZMK_COMBO(combo_backspace, &kp BACKSPACE, TK1 TK2, DEF)
+ZMK_COMBO(combo_backspace, &kp BACKSPACE, 15 16, 1)
 // ZMK_COMBO(thread_arrow, &thread_arrow, RT1 RT2 RT3, DEF)
