@@ -49,8 +49,8 @@
 // // ZMK_COMBO(combo_backspace, &kp BACKSPACE, 15 16, 1)
 // // ZMK_COMBO(thread_arrow, &thread_arrow, RT1 RT2 RT3, DEF)
 
-/ {
-    combos {
+/ { \
+ combos {
         compatible = "zmk,combos";
 
         combo_esc {
@@ -184,3 +184,4 @@
             key-positions = <36 37>;
         };
     };
+};
