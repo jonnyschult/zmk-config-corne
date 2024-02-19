@@ -20,7 +20,7 @@
 
 &lt { tapping-term-ms = <400>; };
 
-// / {
+/ {
 //     combos {
 //         compatible = "zmk,combos";
 
