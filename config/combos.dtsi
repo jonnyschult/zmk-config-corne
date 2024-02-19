@@ -65,11 +65,11 @@
             bindings = <&kp A>;
         };
 
-        combo_b {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <15 16>;
-            timeout-ms = <50>;
-        };
+        // combo_b {
+        //     bindings = <&kp BACKSPACE>;
+        //     key-positions = <15 16>;
+        //     timeout-ms = <50>;
+        // };
         
         combo_b {
             bindings = <&kp BACKSPACE>;
