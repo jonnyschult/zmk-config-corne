@@ -1,12 +1,12 @@
 #pragma once
 
-#define GLBMOD 8
-#define TK1 15
-#define TK2 16
-#define TK3 17
-#define TK4 18
-#define TK5 19
-#define TK6 20
-#define LK1 32
-#define LK2 33
-#define LK3 15
+#define LOI 15 // Left Outside Inserter
+#define LMI 16
+#define LII 17
+#define RII 18
+#define RMI 19
+#define ROI 20
+#define LSH 14
+#define MK1 38
+#define MK2 39
+#define MK3 21

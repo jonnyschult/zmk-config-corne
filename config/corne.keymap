@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #include "ten.h"
+#include "layers.h"
 #include "combos.dtsi"
 
 &mt {
@@ -21,141 +22,6 @@
 &lt { tapping-term-ms = <400>; };
 
 / {
-//     combos {
-//         compatible = "zmk,combos";
-
-    //     combo_esc {
-    //         timeout-ms = <50>;
-    //         key-positions = <1 2>;
-    //         bindings = <&kp ESCAPE>;
-    //     };
-
-    //    combo_a {
-    //         timeout-ms = <50>;
-    //         key-positions = <12 13>;
-    //         bindings = <&kp A>;
-    //     };
-
-        // combo_b {
-        //     bindings = <&kp BACKSPACE>;
-        //     key-positions = <15 16>;
-        //     timeout-ms = <50>;
-        // };
-        
-        // combo_b {
-        //     bindings = <&kp BACKSPACE>;
-        //     key-positions = <TK1 TK2>;
-        //     timeout-ms = <50>;
-        // };
-
-        // combo_c {
-        //     timeout-ms = <200>;
-        //     key-positions = <9 10>;
-        //     bindings = <&kp C>;
-        // };
-        
-        // combo_d {
-        //     timeout-ms = <200>;
-        //     key-positions = <18 19>;
-        //     bindings = <&kp D>;
-        // };
-
-        // combo_e {
-        //     timeout-ms = <200>;
-        //     key-positions = <27 28>;
-        //     bindings = <&kp E>;
-        // };
-        // combo_tab {
-        //     bindings = <&kp TAB>;
-        //     key-positions = <13 14>;
-        // };
-
-        // combo_shift {
-        //     bindings = <&kp LEFT_SHIFT>;
-        //     key-positions = <25 26>;
-        // };
-
-        // combo_delete {
-        //     bindings = <&kp DELETE>;
-        //     key-positions = <21 22>;
-        // };
-
-        // combo_rshift {
-        //     bindings = <&kp RIGHT_SHIFT>;
-        //     key-positions = <33 34>;
-        // };
-
-        // exclm {
-        //     bindings = <&kp EXCLAMATION>;
-        //     key-positions = <1 13>;
-        // };
-
-        // at {
-        //     bindings = <&kp AT_SIGN>;
-        //     key-positions = <2 14>;
-        // };
-
-        // hash {
-        //     bindings = <&kp HASH>;
-        //     key-positions = <3 15>;
-        // };
-
-        // dllr {
-        //     bindings = <&kp DOLLAR>;
-        //     key-positions = <4 16>;
-        // };
-
-        // percnt {
-        //     bindings = <&kp PERCENT>;
-        //     key-positions = <5 17>;
-        // };
-
-        // caret {
-        //     bindings = <&kp CARET>;
-        //     key-positions = <6 18>;
-        // };
-
-        // and {
-        //     bindings = <&kp AMPERSAND>;
-        //     key-positions = <7 19>;
-        // };
-
-        // str {
-        //     bindings = <&kp ASTERISK>;
-        //     key-positions = <8 20>;
-        // };
-
-        // leftparen {
-        //     bindings = <&kp LPAR>;
-        //     key-positions = <9 21>;
-        // };
-
-        // rparen {
-        //     bindings = <&kp RPAR>;
-        //     key-positions = <10 22>;
-        // };
-
-        // layout_switch {
-        //     bindings = <&tog 4>;
-        //     key-positions = <36 37 40 41>;
-        // };
-
-        // system_reset {
-        //     bindings = <&sys_reset>;
-        //     key-positions = <3 4 5>;
-        // };
-
-        // bootloader {
-        //     bindings = <&bootloader>;
-        //     key-positions = <15 16 17>;
-        // };
-
-        // system_layer_combo {
-        //     bindings = <&mo 3>;
-        //     key-positions = <36 37>;
-        // };
-    // };
-
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     keymap {
@@ -163,16 +29,16 @@
 
         colemak_layer {
             // -----------------------------------------------------------------------------------------
-            // |      |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |       |
-            // |      |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |       |
-            // |      |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |       |
-            //                    | CTL | GUI | SPC |   | ENT | SHFT | ALT |
+            // |      |     |     |     |     |     |   |     |     |     |     |     |       |
+            // |      |     |     |  U  |  O  |  E  |   |  A  |  I  |  Y  |     |     |       |
+            // |      |     |     |     |     |     |   |     |     |     |     |     |       |
+            //                    |     |     | SPC |   | BSP |     |     |
 
             bindings = <
-&none  &kp Q  &kp W  &kp F             &kp P         &kp B          &kp J        &kp L                      &kp U             &kp Y    &kp SEMICOLON  &none
+&none  &none  &none  &none             &none         &none          &none        &none                      &none             &none    &none  &none
 &none  &kp A  &kp R  &kp S             &kp T         &kp G          &kp M        &kp N                      &kp E             &kp I    &kp O          &none
-&none  &kp Z  &kp X  &kp C             &kp D         &kp V          &kp K        &kp H                      &kp COMMA         &kp DOT  &kp FSLH       &none
-                     &kp LEFT_CONTROL  &kp LEFT_GUI  &lt 2 SPACE    &lt 1 ENTER  &mt RIGHT_SHIFT BACKSPACE  &mt LEFT_ALT ESC
+&none  &none  &none  &none             &none         &none          &none        &none                      &none         &none  &none       &none
+                     &none  &none  &kp SPACE    &kp BACKSPACE  &none  &none
             >;
         };
 

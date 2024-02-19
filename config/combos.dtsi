@@ -39,12 +39,70 @@
 #define ZMK_COMBO(...) MACRO_CHOOSER5(__VA_ARGS__, ZMK_COMBO_6_ARGS, ZMK_COMBO_5_ARGS, ZMK_COMBO_4_ARGS)(__VA_ARGS__)
 
 /*
-  ╭─────────────────────────┬─────────────────────────╮
-  │ LT4 LT3 LT2 LT1  <----<ing>---->  RT1 RT2 RT3 RT4 │
-  │ LM4 LM3 LM2 LM1  <----<the>---->  RM1 RM2 RM3 RM4 │
-  │ LB4 LB3 LB2 LB1 LB0     │     RB0 RB1 RB2 RB3 RB4 │
-  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
-              ╰─────────────┴─────────────╯
+  ╭───────────────────────┬───────────────────────╮
+  │                       |                       │
+  │      LM3 LM2 LM1 TK3  |  RM1 RM2 RM3 RM4      │
+  │                       │                       │
+  ╰───────────╮       LH0 │ RK1       ╭───────────╯
+              ╰───────────┴───────────╯    
 */
-ZMK_COMBO(combo_backspace, &kp BACKSPACE, TK1 TK2, 0)
-// ZMK_COMBO(thread_arrow, &thread_arrow, RT1 RT2 RT3, DEF)
+
+/***********************************************
+*               ALPHA LAYER COMBOS             *
+************************************************/
+
+// ZMK_COMBO(chord_a, &kp A, LII, ALPHA) // 'a' - Only RMI key needed
+ZMK_COMBO(chord_b, &kp B, LII RII RMI, ALPHA)
+ZMK_COMBO(chord_c, &kp C, LMI RII, ALPHA)
+ZMK_COMBO(chord_d, &kp D, LII LMI, ALPHA)
+// ZMK_COMBO(chord_e, &kp E, RII, ALPHA) // 'e' - Only ROI key needed
+ZMK_COMBO(chord_f, &kp F, LII LMI RII, ALPHA)
+ZMK_COMBO(chord_g, &kp G, LMI ROI, ALPHA)
+ZMK_COMBO(chord_h, &kp H, LOI RMI, ALPHA)
+// ZMK_COMBO(chord_i, &kp I, RMI, ALPHA) // 'i' - Only LMI key needed
+ZMK_COMBO(chord_j, &kp J, LOI RII RMI, ALPHA)
+ZMK_COMBO(chord_k, &kp K, ROI RMI RII, ALPHA)
+ZMK_COMBO(chord_l, &kp L, LII RMI, ALPHA) 
+ZMK_COMBO(chord_m, &kp M, LOI RII, ALPHA)
+ZMK_COMBO(chord_n, &kp N, LMI RMI, ALPHA)
+// ZMK_COMBO(chord_o, &kp O, LMI, ALPHA) // 'o' - Only LII key needed
+ZMK_COMBO(chord_p, &kp P, LOI ROI, ALPHA)
+ZMK_COMBO(chord_q, &kp Q, LII LMI ROI, ALPHA)
+ZMK_COMBO(chord_r, &kp R, LMI RII RMI, ALPHA) 
+ZMK_COMBO(chord_s, &kp S, LII RII, ALPHA) 
+ZMK_COMBO(chord_t, &kp T, RII RMI, ALPHA)
+// ZMK_COMBO(chord_u, &kp U, LMI, ALPHA) // 'u' - Only LMI key needed
+ZMK_COMBO(chord_v, &kp V, LMI RII ROI, ALPHA)
+ZMK_COMBO(chord_w, &kp W, LII LMI RMI, ALPHA)
+ZMK_COMBO(chord_x, &kp X, RMI ROI, ALPHA)
+// ZMK_COMBO(chord_y, &kp Y, ROI, ALPHA) // 'y' - Only ROI key needed
+ZMK_COMBO(chord_z, &kp Z, LMI LOI, ALPHA)
+
+/***************  SHIFTED  ********************/
+
+ZMK_COMBO(chord_a, &kp A, LSH LII, ALPHA)
+ZMK_COMBO(chord_b, &kp B, LSH LII RII RMI, ALPHA)
+ZMK_COMBO(chord_c, &kp C, LSH LMI RII, ALPHA)
+ZMK_COMBO(chord_d, &kp D, LSH LII LMI, ALPHA)
+ZMK_COMBO(chord_e, &kp E, LSH RII, ALPHA)
+ZMK_COMBO(chord_f, &kp F, LSH LII LMI RII, ALPHA)
+ZMK_COMBO(chord_g, &kp G, LSH LMI ROI, ALPHA)
+ZMK_COMBO(chord_h, &kp H, LSH LOI RMI, ALPHA)
+ZMK_COMBO(chord_i, &kp I, LSH RMI, ALPHA)
+ZMK_COMBO(chord_j, &kp J, LSH LOI RII RMI, ALPHA)
+ZMK_COMBO(chord_k, &kp K, LSH ROI RMI RII, ALPHA)
+ZMK_COMBO(chord_l, &kp L, LSH LII RMI, ALPHA) 
+ZMK_COMBO(chord_m, &kp M, LSH LOI RII, ALPHA)
+ZMK_COMBO(chord_n, &kp N, LSH LMI RMI, ALPHA)
+ZMK_COMBO(chord_o, &kp O, LSH LMI, ALPHA)
+ZMK_COMBO(chord_p, &kp P, LSH LOI ROI, ALPHA)
+ZMK_COMBO(chord_q, &kp Q, LSH LII LMI ROI, ALPHA)
+ZMK_COMBO(chord_r, &kp R, LSH LMI RII RMI, ALPHA) 
+ZMK_COMBO(chord_s, &kp S, LSH LII RII, ALPHA) 
+ZMK_COMBO(chord_t, &kp T, LSH RII RMI, ALPHA)
+ZMK_COMBO(chord_u, &kp U, LSH LMI, ALPHA)
+ZMK_COMBO(chord_v, &kp V, LSH LMI RII ROI, ALPHA)
+ZMK_COMBO(chord_w, &kp W, LSH LII LMI RMI, ALPHA)
+ZMK_COMBO(chord_x, &kp X, LSH RMI ROI, ALPHA)
+ZMK_COMBO(chord_y, &kp Y, LSH ROI, ALPHA)
+ZMK_COMBO(chord_z, &kp Z, LSH LMI LOI, ALPHA)
