@@ -49,7 +49,7 @@
 // // ZMK_COMBO(combo_backspace, &kp BACKSPACE, 15 16, 1)
 // // ZMK_COMBO(thread_arrow, &thread_arrow, RT1 RT2 RT3, DEF)
 
-/ { \
+{ 
  combos {
         compatible = "zmk,combos";
 
