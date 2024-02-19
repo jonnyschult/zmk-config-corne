@@ -56,27 +56,27 @@ ZMK_COMBO(chord_b, &kp B, LII RII RMI, ALPHA, 500)
 ZMK_COMBO(chord_c, &kp C, LMI RII, ALPHA, 500)
 ZMK_COMBO(chord_d, &kp D, LII LMI, ALPHA, 500)
 // ZMK_COMBO(chord_e, &kp E, RII, ALPHA, 500) // 'e' - Only ROI key needed
-ZMK_COMBO(chord_f, &kp F, LII LMI RII, ALPHA, 500)
+ZMK_COMBO(chord_f, &kp F, LII LMI RII, ALPHA, 500) // FAILED
 ZMK_COMBO(chord_g, &kp G, LMI ROI, ALPHA, 500)
 ZMK_COMBO(chord_h, &kp H, LOI RMI, ALPHA, 500)
 // ZMK_COMBO(chord_i, &kp I, RMI, ALPHA, 500) // 'i' - Only LMI key needed
-ZMK_COMBO(chord_j, &kp J, LOI RII RMI, ALPHA, 500)
-ZMK_COMBO(chord_k, &kp K, ROI RMI RII, ALPHA, 500)
-ZMK_COMBO(chord_l, &kp L, LII RMI, ALPHA, 500) 
+ZMK_COMBO(chord_j, &kp J, LOI RII RMI, ALPHA, 500) // FAILED
+ZMK_COMBO(chord_k, &kp K, LOI LMI LII, ALPHA, 500) // FAILED
+ZMK_COMBO(chord_l, &kp L, LII RMI, ALPHA, 500)
 ZMK_COMBO(chord_m, &kp M, LOI RII, ALPHA, 500)
 ZMK_COMBO(chord_n, &kp N, LMI RMI, ALPHA, 500)
 // ZMK_COMBO(chord_o, &kp O, LMI, ALPHA, 500) // 'o' - Only LII key needed
 ZMK_COMBO(chord_p, &kp P, LOI ROI, ALPHA, 500)
-ZMK_COMBO(chord_q, &kp Q, LII LMI ROI, ALPHA, 500)
-ZMK_COMBO(chord_r, &kp R, LMI RII RMI, ALPHA, 500) 
-ZMK_COMBO(chord_s, &kp S, LII RII, ALPHA, 500) 
-ZMK_COMBO(chord_t, &kp T, RII RMI, ALPHA, 500)
+ZMK_COMBO(chord_q, &kp Q, LII LMI ROI, ALPHA, 500) // FAILED
+ZMK_COMBO(chord_r, &kp R, LMI RII RMI, ALPHA, 500) // FAILED 
+ZMK_COMBO(chord_s, &kp S, LII RII, ALPHA, 500) // FAILED
+ZMK_COMBO(chord_t, &kp T, RII RMI, ALPHA, 500) // FAILED
 // ZMK_COMBO(chord_u, &kp U, LMI, ALPHA, 500) // 'u' - Only LMI key needed
-ZMK_COMBO(chord_v, &kp V, LMI RII ROI, ALPHA, 500)
-ZMK_COMBO(chord_w, &kp W, LII LMI RMI, ALPHA, 500)
-ZMK_COMBO(chord_x, &kp X, RMI ROI, ALPHA, 500)
+ZMK_COMBO(chord_v, &kp V, LMI RII ROI, ALPHA, 500) // FAILED
+ZMK_COMBO(chord_w, &kp W, LII LMI RMI, ALPHA, 500) // FAILED
+ZMK_COMBO(chord_x, &kp X, RMI ROI, ALPHA, 500) // FAILED
 // ZMK_COMBO(chord_y, &kp Y, ROI, ALPHA, 500) // 'y' - Only ROI key needed
-ZMK_COMBO(chord_z, &kp Z, LMI LOI, ALPHA, 500)
+ZMK_COMBO(chord_z, &kp Z, LMI LOI, ALPHA, 500) // FAILED
 
 /***************  SHIFTED  ********************/
 
