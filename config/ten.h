@@ -4,7 +4,7 @@
 #define LMF 16
 #define LIF 17
 #define RIF 18
-#define RMI 19
+#define RMF 19
 #define RRF 20
 #define LSH 14
 #define MK1 38
