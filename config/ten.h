@@ -1,11 +1,11 @@
 #pragma once
 
-#define LOI 15 // Left Outside Inserter
-#define LMI 16
-#define LII 17
-#define RII 18
+#define LRF 15 // Left Outside Inserter
+#define LMF 16
+#define LIF 17
+#define RIF 18
 #define RMI 19
-#define ROI 20
+#define RRF 20
 #define LSH 14
 #define MK1 38
 #define MK2 39
