@@ -52,7 +52,7 @@
 ************************************************/
 
 //ZMK_COMBO(combo_a, &kp A, LIF, ALPHA, 200)
-ZMK_COMBO(combo_b, &kp B, LMF LIF RIF, ALPHA, 200)
+ZMK_COMBO(combo_b, &kp B, LRF LMF LIF RRF, ALPHA, 200)
 ZMK_COMBO(combo_c, &kp C, LRF LMF RMF RRF, ALPHA, 200)
 ZMK_COMBO(combo_d, &kp D, LMF LIF RIF RMF, ALPHA, 200)
 //ZMK_COMBO(combo_e, &kp E, RIF, ALPHA, 200)
@@ -138,7 +138,7 @@ ZMK_COMBO(combo_ctrl, &kp LCTRL, LRF LMF, NAV, 200)
 
 
 ZMK_COMBO(shift_a, &kp LS(A), LSH LIF, ALPHA, 500)
-ZMK_COMBO(shift_b, &kp LS(B), LSH LMF LIF RIF, ALPHA, 500)
+ZMK_COMBO(shift_b, &kp LS(B), LSH LRF LMF LIF RRF, ALPHA, 500)
 ZMK_COMBO(shift_c, &kp LS(C), LSH LRF LMF RMF RRF, ALPHA, 500)
 ZMK_COMBO(shift_d, &kp LS(D), LSH LMF LIF RIF RMF, ALPHA, 500)
 ZMK_COMBO(shift_e, &kp LS(E), LSH RIF, ALPHA, 500)
