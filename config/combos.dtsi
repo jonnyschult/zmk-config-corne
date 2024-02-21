@@ -52,8 +52,8 @@
 ************************************************/
 
 //ZMK_COMBO(combo_a, &kp A, LIF, ALPHA, 200)
-ZMK_COMBO(combo_b, &kp B, 16 17 18, ALPHA, 200)
-ZMK_COMBO(combo_c, &kp C, LRF LMF RMF RRF, ALPHA, 200)
+// ZMK_COMBO(combo_b, &kp B, 16 17 18, ALPHA, 200)
+// ZMK_COMBO(combo_c, &kp C, LRF LMF RMF RRF, ALPHA, 200)
 ZMK_COMBO(combo_d, &kp D, LMF LIF RIF RMF, ALPHA, 200)
 //ZMK_COMBO(combo_e, &kp E, RIF, ALPHA, 200)
 ZMK_COMBO(combo_f, &kp F, LMF LIF RIF, ALPHA, 200)
