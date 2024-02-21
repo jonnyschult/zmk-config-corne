@@ -32,7 +32,7 @@
          &none          &none          &none          &none          &none         &none               &none             &none          &none         &none          &none          &none     
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
 // │              │              │      mod     │       U      │       O      │       A      │   │       E         │       I      │       Y      │      mod     │              │              │
-         &none          &none         &kp TAB         &kp U          &kp O          &kp A              &kp E             &kp I          &kp Y      &lt NUM ESC       &none          &none    
+         &none          &none     &mt LSHIFT TAB      &kp U          &kp O          &kp A              &kp E             &kp I          &kp Y      &lt NUM ESC       &none          &none    
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
 // │              │              │              │              │              │              │   │                 │              │              │              │              │              │
          &none          &none          &none          &none          &none         &none                &none            &none          &none          &none          &none          &none   
@@ -48,7 +48,7 @@
          &none          &none          &none          &none          &none         &none               &none             &none          &none         &none          &none          &none     
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
 // │              │              │      mod     │       5      │       3      │       1      │   │       2         │       4      │       6      │      mod     │              │              │
-         &none          &none         &kp TAB         &kp 5          &kp 3          &kp 1              &kp 2             &kp 4          &kp 6      &lt ALPHA ESC       &none          &none    
+         &none          &none     &mt LSHIFT TAB      &kp 5          &kp 3          &kp 1              &kp 2             &kp 4          &kp 6      &lt ALPHA ESC       &none          &none    
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
 // │              │              │              │              │              │              │   │                 │              │              │              │              │              │
          &none          &none          &none          &none          &none         &none                &none            &none          &none          &none          &none          &none   
@@ -64,7 +64,7 @@
          &none          &none          &none          &none          &none         &none               &none             &none          &none         &none          &none          &none     
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
 // │              │              │      mod     │   LESS_THAN  │    COMMA     │      DOT     │   │   APOSTRAPHE    │     EQUAL    │ GREATER_THAN │      mod     │              │              │
-         &none          &none         &kp TAB    &kp LESS_THAN    &kp COMMA        &kp DOT         &kp APOSTROPHE     &kp EQUAL   &kp GREATER_THAN &lt NUM ESC       &none          &none    
+         &none          &none     &mt LSHIFT TAB &kp LESS_THAN    &kp COMMA        &kp DOT         &kp APOSTROPHE     &kp EQUAL   &kp GREATER_THAN &lt NUM ESC       &none          &none    
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
 // │              │              │              │              │              │              │   │                 │              │              │              │              │              │
          &none          &none          &none          &none          &none         &none                &none            &none          &none          &none          &none          &none   
@@ -80,7 +80,7 @@
          &none          &none          &none          &none          &none         &none               &none             &none          &none         &none          &none          &none     
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
 // │              │              │      mod     │    LSHIFT    │     LGUI     │      LALT    │   │       LEFT      │       UP     │    RIGHT     │      mod     │              │              │
-         &none          &none         &kp TAB      &kp LSHIFT      &kp LGUI        &kp LALT            &kp LEFT         &kp UP       &kp RIGHT      &lt NUM ESC       &none          &none    
+         &none          &none     &mt LSHIFT TAB   &kp LCTRL       &kp LGUI        &kp LALT            &kp LEFT         &kp UP       &kp RIGHT      &lt NUM ESC       &none          &none    
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
 // │              │              │              │              │              │              │   │                 │              │              │              │              │              │
          &none          &none          &none          &none          &none         &none                &none            &none          &none          &none          &none          &none   
