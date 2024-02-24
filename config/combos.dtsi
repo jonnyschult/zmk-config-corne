@@ -77,6 +77,8 @@ ZMK_COMBO(combo_w, &kp W, LRF LIF RIF RRF, ALPHA, 200)
 ZMK_COMBO(combo_x, &kp X, LIF RRF, ALPHA, 200)
 //ZMK_COMBO(combo_y, &kp Y, RRF, ALPHA, 200)
 ZMK_COMBO(combo_z, &kp Z, LRF RIF, ALPHA, 200)
+ZMK_COMBO(combo_enter, &kp ENTER, LRF LMF LIF RIF RMF RRF, ALPHA, 200)
+
 
 
 //ZMK_COMBO(combo_1, &kp 1, LIF, NUM, 200)
