@@ -7,6 +7,6 @@
 #define RMF 19
 #define RRF 20
 #define LSH 14
-#define MK1 38
-#define MK2 39
-#define MK3 21
+#define LTM 38
+#define RTM 39
+#define RPM 21
